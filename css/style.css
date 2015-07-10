@@ -42,14 +42,14 @@ html, body {
   background-size: cover;
 }
 
-#about {
+#link1 {
 }
 
-#services {
+#link2 {
   background-color: #306d9f;
   color: #ffffff;
 }
-#services .glyphicon {
+#link2 .glyphicon {
   border: 2px solid #FFFFFF;
   border-radius: 50%;
   display: inline-block;
@@ -61,8 +61,8 @@ html, body {
   width: 140px;
 }
 
-#information {
-  background: url(../images/logo.png) no-repeat center center fixed; 
+#link3 {
+  background: url(../images/moon_rise.jpg) no-repeat center center fixed; 
   display: table;
   height: 800px;
   position: relative;
@@ -72,7 +72,7 @@ html, body {
   -o-background-size: cover;
   background-size: cover;
 }
-#information .panel {
+#link3 .panel {
   opacity: 0.85;
 }
 
@@ -109,4 +109,9 @@ p.vignette:after {
  height: 100%;
  z-index: 2;
  content: "";
+}
+p.vignette:hover:after {
+ -moz-box-shadow: inset 0 0 20em #666;  
+ -webkit-box-shadow: inset 0 0 20em #666;   
+ box-shadow: inset 0 0 20em #666;
 }
