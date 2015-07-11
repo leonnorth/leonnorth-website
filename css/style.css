@@ -12,12 +12,12 @@ html, body {
   width: 100%;
 }
 
-/* opaque well on the home section */
+/* opaque well on the home section Green */
 #home .well {
   background-color: rgba(88, 140, 126, 0.5); 
 }
 
-/* profile section */
+/* profile section Yellow*/
 #profile {
   background-color: #F2E394;
   color: #ffffff;
@@ -27,18 +27,46 @@ html, body {
   max-width: 345px;
 }
 
-/* technical skills section */
+/* technical skills section Orange*/
 #techskills {
   background-color: #F2AE72;
   color: #ffffff;
 }
 #techskills .ability-score {
   float: right;
+      -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+     display: inline-block;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+#techskills .ability-score:hover {
+  color: #FFFFFF !important;
+    -webkit-transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    -o-transform:scale(1.1,1.1);
+    .scale(1.1,1.1);
 }
 
-/* experience section */
+/* experience section Red*/
 #experience {
   background-color: #D96459;
+  color: #ffffff;
+}
+
+/* projects section Crimson*/
+#projects {
+  background-color: #8C4646;
+  color: #ffffff;
+}
+
+/* contact section Green*/
+#contact {
+  background-color: #588C7E;
   color: #ffffff;
 }
 
