@@ -1,7 +1,45 @@
+/* COLOUR SCHEME
+Green : (88, 140, 126,), (#588C7E)
+Yellow: (242, 227, 148), (#F2E394);
+Orange: (242, 174, 114),(#F2AE72);
+Red:(217, 100, 89),(#D96459);
+Crimson:(140, 70, 70),(#8C4646);
+*/
+
 /* general styles */
 html, body {
   height: 100%;
   width: 100%;
+}
+
+/* opaque well on the home section */
+#home .well {
+  background-color: rgba(88, 140, 126, 0.5); 
+}
+
+/* profile section */
+#profile {
+  background-color: #F2E394;
+  color: #ffffff;
+}
+#profile .img-responsive {
+  max-height: 483px;
+  max-width: 345px;
+}
+
+/* technical skills section */
+#techskills {
+  background-color: #F2AE72;
+  color: #ffffff;
+}
+#techskills .ability-score {
+  float: right;
+}
+
+/* experience section */
+#experience {
+  background-color: #D96459;
+  color: #ffffff;
 }
 
 /* padded section */
@@ -10,6 +48,11 @@ html, body {
 }
 .pad-section img {
   width: 100%;
+}
+
+/* dividing line */
+.divider {
+  border-bottom: 1px solid #FFFFFF;
 }
 
 /* vertical-centered text */
