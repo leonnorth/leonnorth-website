@@ -14,7 +14,8 @@ html, body {
 
 /* opaque well on the home section Green */
 #home .well {
-  background-color: rgba(88, 140, 126, 0.5); 
+  background-color: rgba(88, 140, 126, 0.6); 
+  border: none;
 }
 
 /* profile section Yellow*/
