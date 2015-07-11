@@ -12,6 +12,18 @@ html, body {
   width: 100%;
 }
 
+/* sections */
+#home {
+  background: url(../images/green_budding_plant.jpg) no-repeat center center fixed; 
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 /* opaque well on the home section Green */
 #home .well {
   background-color: rgba(88, 140, 126, 0.6); 
@@ -20,7 +32,7 @@ html, body {
 
 /* profile section Yellow*/
 #profile {
-  background-color: #F2E394;
+  background-color: #F0E192;
   color: #ffffff;
 }
 #profile .img-responsive {
@@ -101,18 +113,7 @@ html, body {
   color: white;
 }
 
-/* additional sections */
-#home {
-  background: url(../images/green_budding_plant.jpg) no-repeat center center fixed; 
-  display: table;
-  height: 100%;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 
 #link1 {
 }
