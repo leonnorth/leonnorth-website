@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+    <title>Home</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style type="text/css">
+      path {
+        fill-rule: evenodd;
+        fill: #FF0000 ;
+        fill-opacity: .7;
+      }   
+    </style>
+  </head>
+  <body>
+  	<script src="js/readData.js"></script>
+  	<script src="js/freeWriting.js"></script>
+  	<script src="js/bodyButtons.js"></script>
+  	<script src="js/navButtons.js"></script>
+  	<script src="js/teleprompter.js"></script>
+
+  	<script>
+  		var height = 300,
+  			width = 500,
+        trans = 500,
+  			bodyButtonHeight = 120,
+  			bodyButtonWidth = 220,
+  			bodyButtonY = 80,
+  			buffer = 20,
+        selection = 0,
+        speed = 10;
+        backScreen = appSelect;
+
+  		var canvas = d3.select("body").append("svg")
+  			.attr("width", width)
+  			.attr("height", height)
+  			.style("border-style", "dotted")
+  			.style("border-width", 2);
+
+      canvas.append("rect")
+        .attr("x",0)
+        .attr("y",0)
+        .attr("width",width)
+        .attr("height",height)
+        .style("fill", "white")
+        .style("opacity", 0.6);
+
+      //makes a container for headings of each screen
+  		var heading = canvas.append("heading")
+	   		.attr("class", "heading")
+
+      //This function call begins the programme
+  		appSelect();
+
+      /*
+      This function is essentialy the global home screen
+      */
+  		function appSelect(){
+        document.body.style.backgroundImage = "";
+  			newHeading("Select Application");
+        selection = 0;
+
+  			var buttons = [
+  				{"title":"Free Writing", "func":freeWriting},
+  				{"title":"Teleprompter", "func":teleprompter}];
+
+  			bodyButtons(buttons);
+  		}
+
+      //All functions bellow are used for both applications
+
+      /*
+      This function updates the headding, it is used 
+      in the global home screen (appSelect()) and
+      in both applications so I put it here as it logicalls 
+      should not go in either of the other programmes js files
+      */
+  		function newHeading(title){
+        var p = canvas.append("g")
+
+        var t = p.append("text")
+          .text(title)
+          .attr("transform", "translate("+buffer+","+buffer+")")
+          .attr("y", 0)
+          .style("font-family", "sans-serif")
+          .style("font-size","50px")
+          .style("opacity", 0.0)
+          .attr("text-anchor", "start")
+          .attr("dy", ".71em"); 
+
+        t.transition()
+          .style("opacity", 1.0)
+          .duration(0)
+  		}
+
+      function scrollingText(displayText){
+        var x = 200;
+        speed = 10;
+
+        var scrollingSpeech = canvas.append("g")
+          .attr("class", "speech");
+
+        var text = scrollingSpeech.append("text")
+          .text(displayText)
+          .attr("x",x)
+          .attr("y", 100)
+          .style("font-size","60px")
+          .style("font-family", "sans-serif")
+          .attr("text-anchor", "start")
+          .attr("dy", ".71em");
+
+        var reading = setInterval(function(){
+          x -= speed
+          text.transition()
+            .attr("x", x)
+            .duration(600)
+            .ease("linear")
+
+          if (text.node().getComputedTextLength()  < (-x)-width){
+            done();
+          }
+        },30);
+        function done(){
+          clearInterval(reading);      
+        }  
+      }
+
+      function transitionFade(){
+        canvas.selectAll("g")
+          .transition()
+          .duration(100)
+          .style("opacity", 0.0)
+          .each("end", function(){d3.select(this).remove()});
+      }
+
+  	</script>
+  </body>
+</html>
