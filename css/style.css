@@ -10,7 +10,16 @@ Crimson:(140, 70, 70),(#8C4646);
 html, body {
   height: 100%;
   width: 100%;
+  min-width:400px; /* suppose you want minimun width of 1000px */
+   width: auto !important;  /* Firefox will set width as auto */
+   width:400px;             /* As IE ignores !important it will set width as 1000px; */
 }
+
+/* Fonts */
+h1, h2, h3, h4, p {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 /* navbar 
 .navbar-default {
     background-color: #F2E394;
@@ -50,7 +59,7 @@ html, body {
   background-color: #f2ae72;
 }
 .navbar-default .navbar-toggle {
-  border-color: #f2ae72;
+  border: none;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: #f2ae72;
@@ -58,7 +67,7 @@ html, body {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #588c7e;
 }
-.navbar-default .navbar-collapse,
+.navbar-default .navbar-collapse, .navbar-collapse:focus,
 .navbar-default .navbar-form {
   border-color: #588c7e;
 }
@@ -247,3 +256,6 @@ p.vignette:hover:after {
  -webkit-box-shadow: inset 0 0 10em #8C4646;   
  box-shadow: inset 0 0 10em #8C4646;
 }
+
+/* Email Link */
+a[href^="mailto"] { color: #F2E394; }
