@@ -8,34 +8,22 @@ $(document).ready(function () {
   });
 });
 
-( function( $ ) {
-	
-	// Setup variables
-	$window = $(window);
-	$slide = $('.homeSlide');
-	$body = $('body');
-	
+$("#nav ul li a[href^='#']").on('click', function(e) {
 
-	
-	function adjustWindow(){
-		// Init Skrollr
-		var s = skrollr.init({
-		    forceHeight: false
-		});
-	 
-		// Get window size
-	    winH = $window.height();
-	    
-	    // Keep minimum height 550
-	    if(winH <= 550) {
-			winH = 550;
-		} 
-	    
-	    // Resize our slides
-	    $slide.height(winH);
-	    
-	    // Refresh Skrollr after resizing our sections
-		s.refresh($('.homeSlide'));
-	}
-		
-} )( jQuery );
+   // prevent default anchor click behavior
+   e.preventDefault();
+
+   // store hash
+   var hash = this.hash;
+
+   // animate
+   $('html, body').animate({
+       scrollTop: $(hash).offset().top
+     }, 300, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
+});
