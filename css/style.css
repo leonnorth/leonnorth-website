@@ -11,6 +11,65 @@ html, body {
   height: 100%;
   width: 100%;
 }
+/* navbar 
+.navbar-default {
+    background-color: #F2E394;
+    border: none;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #588C7E;
+    background-color: #F2AE72;
+}*/
+.navbar-default {
+  background-color: #f2e394;
+  border: none;
+}
+.navbar-default .navbar-brand {
+  color: #588c7e;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #588c7e;
+}
+.navbar-default .navbar-text {
+  color: #588c7e;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #588c7e;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #588c7e;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #588c7e;
+  background-color: #f2ae72;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #588c7e;
+  background-color: #f2ae72;
+}
+.navbar-default .navbar-toggle {
+  border-color: #f2ae72;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #f2ae72;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #588c7e;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #588c7e;
+}
+.navbar-default .navbar-link {
+  color: #588c7e;
+}
+.navbar-default .navbar-link:hover {
+  color: #588c7e;
+}
+
+
 
 /* sections */
 #home {
@@ -32,7 +91,7 @@ html, body {
 
 /* profile section Yellow*/
 #profile {
-  background-color: #F0E192;
+  background-color: #588C7E;
   color: #ffffff;
 }
 #profile .img-responsive {
@@ -172,9 +231,9 @@ p.vignette img {
  display: block;
 }
 p.vignette:after {
- -moz-box-shadow: inset 0 0 2em #666;  
- -webkit-box-shadow: inset 0 0 2em #666;   
- box-shadow: inset 0 0 2em #666;
+ -moz-box-shadow: inset 0 0 4em #8C4646;  
+ -webkit-box-shadow: inset 0 0 4em #8C4646;   
+ box-shadow: inset 0 0 4em #8C4646;
  position: absolute;
  top: 0;
  left: 0;
@@ -184,7 +243,7 @@ p.vignette:after {
  content: "";
 }
 p.vignette:hover:after {
- -moz-box-shadow: inset 0 0 20em #666;  
- -webkit-box-shadow: inset 0 0 20em #666;   
- box-shadow: inset 0 0 20em #666;
+ -moz-box-shadow: inset 0 0 10em #8C4646;  
+ -webkit-box-shadow: inset 0 0 10em #8C4646;   
+ box-shadow: inset 0 0 10em #8C4646;
 }
