@@ -1,6 +1,6 @@
  
 function navButtons(buttons){
-	var buttonWidth = 90,
+	var buttonWidth = 100,
     	buttonHeight = 18,
     	buttonY = 260;
 
@@ -15,6 +15,8 @@ function navButtons(buttons){
  	buttons.append("rect")
  		.attr("width", buttonWidth)
  		.attr("height", buttonHeight)
+    .attr("rx", 5)
+    .attr("ry", 5)
     .style("opacity", 0.5)
  		.style("stroke", "black")
   	.style("stroke-width", 2)
@@ -25,7 +27,9 @@ function navButtons(buttons){
     .attr("x", buttonWidth/2)
     .attr("y", buttonHeight - 4)
     .attr("text-anchor", "middle")
+    .style("opacity", 0.7)
     .style("font-family", "sans-serif")
+    .style("font-weight", "bold")
     .attr("font-size", "13px");
 
 }

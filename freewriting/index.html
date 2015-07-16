@@ -2,18 +2,14 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
-    <title>Home</title>
+    <title>Freewriting Teleprompter</title>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <style type="text/css">
-      path {
-        fill-rule: evenodd;
-        fill: #FF0000 ;
-        fill-opacity: .7;
-      }   
-    </style>
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link href="css/main.css" rel="stylesheet" />  
   </head>
   <body>
 
@@ -33,6 +29,27 @@
   	<script src="js/navButtons.js"></script>
   	<script src="js/teleprompter.js"></script>
 
+    <div class="container-fluid">
+      <div class="row">
+        <content class="col-sm-6" id="container">
+        </content>
+        <div class="col-sm-6" id="readme"> 
+          <div class="jumbotron">
+            <h2>Read Me</h2>
+            <p class="lead">This is a demo application designed for Google Glass</p>
+            <h3>FreeWriting</h3>
+            <p>
+            Free writing is a prewriting exercise where a writer will write for a set amount of time. for more information on free writing, read the <a href="https://en.wikipedia.org/wiki/Free_writing">wikipedia page</a>. The goal of my free writing application is either 500 words or 5 minutes, the writing session is over when either of the goals are reached. For the purposes of testing I have reduced the goals to 100 seconds and 60 words. A background picture has been added to simulate an environment the user may use the application. In this case it is a walk through nature. But in reality it would be any number of environments where voice recognition is possible.
+            </p>
+            <h3>Teleprompter</h3>
+            <p>
+            This is an app to help people give speeches. As such, the environment would be on stage or some sort of public venue. I have selected a background image to simulate this.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   	<script>
   		var height = 300,
   			width = 500,
@@ -45,7 +62,7 @@
         speed = 10;
         backScreen = appSelect;
 
-  		var canvas = d3.select("body").append("svg")
+  		var canvas = d3.select("#container").append("svg")
   			.attr("width", width)
   			.attr("height", height)
   			.style("border-style", "dotted")

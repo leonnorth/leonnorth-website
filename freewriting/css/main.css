@@ -1,0 +1,23 @@
+
+path {
+	fill-rule: evenodd;
+	fill: #FF0000 ;
+	fill-opacity: .7;
+}
+
+.jumbotron{
+	background: rgb(219, 219, 219); /* This is for ie8 and below */
+   	background: rgba(219, 219, 219, 0.8);
+}
+
+.navbar-default {
+  background-color: #f2e394;
+  border: none;
+}
+.navbar-default .navbar-brand {
+  color: #588c7e;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #588c7e;
+}
+

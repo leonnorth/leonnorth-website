@@ -70,3 +70,14 @@ float: left;
   shape-rendering: crispEdges;
   opacity: 1;
 }
+
+.navbar-default {
+  background-color: #f2e394;
+  border: none;
+}
+.navbar-default .navbar-brand {
+  color: #588c7e;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #588c7e;
+}

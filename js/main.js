@@ -1,5 +1,6 @@
 //collapse the nav bar when something is clicked or mouse out.
 $(document).ready(function () {
+  $('[data-toggle="popover"]').popover();  
   $(".navbar-nav li a").click(function(event) {
     $(".navbar-collapse").collapse('hide');
   });

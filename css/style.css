@@ -259,3 +259,33 @@ p.vignette:hover:after {
 
 /* Email Link */
 a[href^="mailto"] { color: #F2E394; }
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(230, 230, 230, 0.3);
+  color: #fff;
+  border-radius: 2px;
+}
+
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.skillList{
+  background-color: rgba(242, 227, 148, 0.3);
+  color: #588C7E;
+  
+}
+/* COLOUR SCHEME
+Green : (88, 140, 126,), (#588C7E)
+Yellow: (242, 227, 148), (#F2E394);
+Orange: (242, 174, 114),(#F2AE72);
+Red:(217, 100, 89),(#D96459);
+Crimson:(140, 70, 70),(#8C4646);
+*/

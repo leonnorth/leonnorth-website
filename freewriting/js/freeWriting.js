@@ -17,7 +17,7 @@ var arc = d3.svg.arc()
 The homepage for the free writing application
 */
 function freeWriting(){
-	document.body.style.backgroundImage = "url('images/my-kaokao-wellington-panorama.jpg')";
+	document.body.style.background = "url('images/mt-kaokao-wellington-panorama.jpg') no-repeat center center fixed";
 	backScreen = appSelect;
 
 	//change the heading
@@ -77,13 +77,15 @@ function writeStory(){
 
 //input box to type in, this simulates voice recognition
 function makeInputBox(timeArc, wordCountArc){
+	// d3.select("#content").append("form")
+	// .append("input").attr("type", "text").attr("x", 0).attr("y",height + buffer)
 	var storyInput = document.createElement("INPUT");
 	storyInput.setAttribute("type","text");
 	storyInput.setAttribute("value","Type here to simulate voice recognition...");
 	storyInput.setAttribute("id","storyInput");
 	storyInput.style.position = "absolute";
-	storyInput.style.top = height + buffer +"px";
-	storyInput.style.left = "8px";
+	storyInput.style.top = 55 + height + buffer +"px";
+	storyInput.style.left = "15px";
 	storyInput.style.width = width +"px";
 	storyInput.onkeyup = function(){onkeyup(timeArc, wordCountArc)};
 	document.body.appendChild(storyInput);
