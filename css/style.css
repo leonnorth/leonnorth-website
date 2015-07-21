@@ -1,4 +1,4 @@
-                                                        /* COLOUR SCHEME
+/* COLOUR SCHEME
 Green : (88, 140, 126,), (#588C7E)
 Yellow: (242, 227, 148), (#F2E394);
 Orange: (242, 174, 114),(#F2AE72);
@@ -6,13 +6,13 @@ Red:(217, 100, 89),(#D96459);
 Crimson:(140, 70, 70),(#8C4646);
 */
 
-/* general styles */
+/* general style */
 html, body {
   height: 100%;
   width: 100%;
-  min-width:400px; /* suppose you want minimun width of 1000px */
-   width: auto !important;  /* Firefox will set width as auto */
-   width:400px;             /* As IE ignores !important it will set width as 1000px; */
+  min-width:400px;
+  width: auto !important;
+  width:400px;             /* As IE ignores !important it will set width as 1000px; */
 }
 
 /* Fonts */
@@ -20,17 +20,7 @@ h1, h2, h3, h4, p {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-/* navbar 
-.navbar-default {
-    background-color: #F2E394;
-    border: none;
-}
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #588C7E;
-    background-color: #F2AE72;
-}*/
+/* custom navbar colors */
 .navbar-default {
   background-color: #f2e394;
   border: none;
@@ -77,8 +67,6 @@ h1, h2, h3, h4, p {
 .navbar-default .navbar-link:hover {
   color: #588c7e;
 }
-
-
 
 /* sections */
 #home {
@@ -181,57 +169,6 @@ h1, h2, h3, h4, p {
   color: white;
 }
 
-
-
-#link1 {
-}
-
-#link2 {
-  background-color: #306d9f;
-  color: #ffffff;
-}
-#link2 .glyphicon {
-  border: 2px solid #FFFFFF;
-  border-radius: 50%;
-  display: inline-block;
-  font-size: 60px;
-  height: 140px;
-  line-height: 140px;
-  text-align: center;
-  vertical-align: middle;
-  width: 140px;
-}
-
-#link3 {
-  background: url(../images/moon_rise.jpg) no-repeat center center fixed; 
-  display: table;
-  height: 800px;
-  position: relative;
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-#link3 .panel {
-  opacity: 0.85;
-}
-
-#google_map {
-  height: 500px;
-}
-
-footer {
-  padding: 20px 0;
-}
-footer .glyphicon {
-  color: #333333;
-  font-size: 60px;
-}
-footer .glyphicon:hover {
-  color: #306d9f;
-}
-
 /*vignet for the project image*/
 p.vignette {
   position: relative;
@@ -259,54 +196,29 @@ p.vignette:hover:after {
 
 /* Email Link */
 a[href^="mailto"] { color: #F2E394; }
-/*
-.d3-tip {
-  line-height: 1;
-  font-weight: bold;
-  padding: 12px;
-  background: rgba(230, 230, 230, 0.3);
-  color: #fff;
-  border-radius: 2px;
+
+/* Github link */
+a[href^="https://github.com/leonnorth"] { 
+  color: #FFFFFF; 
 }
 
-
-/* Style northward tooltips differently 
-.d3-tip.n:after {
-  margin: -1px 0 0 0;
-  top: 100%;
-  left: 0;
-}
-*/
-.skillList{
-  
-  color: #D96459;
-  
-}
-/* COLOUR SCHEME
-Green : (88, 140, 126), (#588C7E)
-Yellow: (242, 227, 148), (#F2E394);
-Orange: (242, 174, 114),(#F2AE72);
-Red:(217, 100, 89),(#D96459);
-Crimson:(140, 70, 70),(#8C4646);
-*/
-
+/* tech skills popover */
 .popover{
   width: 200%;
-  background: rgb(88, 140, 126);
+  background: rgb(140, 70, 70);
   color: #FFFFFF;
 }
-
 .popover-title{
   background: rgb(242, 227, 148);
   color: #588C7E;
 }
-
-.popover-content{
-
+.list-group-item{
+  background: rgb(140, 70, 70);
+  color: #FFFFFF;
+  border-color: #7C3636;
 }
 
-.list-group-item{
-  background: rgb(88, 140, 126);
-  color: #FFFFFF;
-  border-color: #487C6E;
+.gitPanel{
+  background-color: rgba(128, 128, 128, 0.2); 
+  border: none;
 }
