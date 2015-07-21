@@ -1,4 +1,4 @@
-/* COLOUR SCHEME
+                                                        /* COLOUR SCHEME
 Green : (88, 140, 126,), (#588C7E)
 Yellow: (242, 227, 148), (#F2E394);
 Orange: (242, 174, 114),(#F2AE72);
@@ -259,7 +259,7 @@ p.vignette:hover:after {
 
 /* Email Link */
 a[href^="mailto"] { color: #F2E394; }
-
+/*
 .d3-tip {
   line-height: 1;
   font-weight: bold;
@@ -270,22 +270,43 @@ a[href^="mailto"] { color: #F2E394; }
 }
 
 
-/* Style northward tooltips differently */
+/* Style northward tooltips differently 
 .d3-tip.n:after {
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
 }
-
+*/
 .skillList{
-  background-color: rgba(242, 227, 148, 0.3);
-  color: #588C7E;
+  
+  color: #D96459;
   
 }
 /* COLOUR SCHEME
-Green : (88, 140, 126,), (#588C7E)
+Green : (88, 140, 126), (#588C7E)
 Yellow: (242, 227, 148), (#F2E394);
 Orange: (242, 174, 114),(#F2AE72);
 Red:(217, 100, 89),(#D96459);
 Crimson:(140, 70, 70),(#8C4646);
 */
+
+.popover{
+  width: 200%;
+  background: rgb(88, 140, 126);
+  color: #FFFFFF;
+}
+
+.popover-title{
+  background: rgb(242, 227, 148);
+  color: #588C7E;
+}
+
+.popover-content{
+
+}
+
+.list-group-item{
+  background: rgb(88, 140, 126);
+  color: #FFFFFF;
+  border-color: #487C6E;
+}
