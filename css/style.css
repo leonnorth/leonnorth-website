@@ -10,9 +10,9 @@ Crimson:(140, 70, 70),(#8C4646);
 html, body {
   height: 100%;
   width: 100%;
-  min-width:400px;
+ 
   width: auto !important;
-  width:400px;             /* As IE ignores !important it will set width as 1000px; */
+             /* As IE ignores !important it will set width as 1000px; */
 }
 
 /* Fonts */
@@ -203,6 +203,18 @@ a[href^="https://github.com/leonnorth"] {
 }
 
 /* tech skills popover */
+.techSkills{
+  width: 100%;
+  background: rgb(140, 70, 70);
+  color: #FFFFFF;
+  border-color: #7C3636;
+}
+.panel > .panel-heading{
+  width: 100%;
+  background: rgb(140, 70, 70);
+  color: #FFFFFF;
+}
+
 .popover{
   width: 200%;
   background: rgb(140, 70, 70);
